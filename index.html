@@ -6,22 +6,129 @@
   <title>Weatherbit • Live Weather</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <div class="app">
+
+<div class="app">
+
     <header>
-      <h1>🌤️ Weatherbit</h1>
-      <p class="subtitle">Real-time weather data</p>
+        <h1>🌤️ Weatherbit Weather Dashboard</h1>
+        <p class="subtitle">
+            Get real-time weather information from anywhere in the world.
+        </p>
     </header>
 
+    <!-- Search -->
     <div class="search-container">
-      <input type="text" id="city" placeholder="Search city... (e.g. London, Tokyo)" value="New York">
-      <button onclick="getWeather()">Search</button>
+        <input
+            type="text"
+            id="city"
+            placeholder="Enter city name (e.g. London, Tokyo, Manila)"
+            value="New York">
+
+        <button onclick="getWeather()">
+            🔍 Search
+        </button>
     </div>
 
-    <div id="weather" class="weather-card"></div>
-    <div id="forecast" class="forecast-container"></div>
-  </div>
+    <!-- Current Date -->
+    <div class="date-time">
+        <p id="currentDate"></p>
+    </div>
 
-  <script src="script.js"></script>
+    <!-- Weather Card -->
+    <div id="weather" class="weather-card">
+
+        <h2 id="location">📍 City, Country</h2>
+
+        <img id="weatherIcon" src="" alt="Weather Icon">
+
+        <h1 id="temperature">--°C</h1>
+
+        <h3 id="description">Weather Description</h3>
+
+        <div class="weather-details">
+
+            <div class="detail">
+                <h4>🌡 Feels Like</h4>
+                <p id="feelsLike">--°C</p>
+            </div>
+
+            <div class="detail">
+                <h4>💧 Humidity</h4>
+                <p id="humidity">--%</p>
+            </div>
+
+            <div class="detail">
+                <h4>🌬 Wind Speed</h4>
+                <p id="wind">-- km/h</p>
+            </div>
+
+            <div class="detail">
+                <h4>👁 Visibility</h4>
+                <p id="visibility">-- km</p>
+            </div>
+
+            <div class="detail">
+                <h4>🌧 Precipitation</h4>
+                <p id="precipitation">--%</p>
+            </div>
+
+            <div class="detail">
+                <h4>☀ UV Index</h4>
+                <p id="uv">--</p>
+            </div>
+
+            <div class="detail">
+                <h4>📈 Pressure</h4>
+                <p id="pressure">-- hPa</p>
+            </div>
+
+            <div class="detail">
+                <h4>🕒 Timezone</h4>
+                <p id="timezone">--</p>
+            </div>
+
+            <div class="detail">
+                <h4>🌅 Sunrise</h4>
+                <p id="sunrise">--</p>
+            </div>
+
+            <div class="detail">
+                <h4>🌇 Sunset</h4>
+                <p id="sunset">--</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 7-Day Forecast -->
+    <section class="forecast-section">
+
+        <h2>📅 7-Day Forecast</h2>
+
+        <div id="forecast" class="forecast-container">
+            <!-- Forecast cards appear here -->
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            Weather data powered by
+            <strong>Weatherbit API</strong>
+        </p>
+
+        <p>
+            Developed using HTML, CSS, and JavaScript
+        </p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
