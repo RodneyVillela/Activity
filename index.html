@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weatherbit Dashboard</title>
+  <title>Weatherbit • Live Weather</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
+  <div class="app">
     <header>
-      <h1>🌤️ Weatherbit Weather</h1>
-      <div class="search-bar">
-        <input type="text" id="city" placeholder="Enter city name..." value="New York">
-        <button onclick="getWeather()">🔍 Search</button>
-      </div>
+      <h1>🌤️ Weatherbit</h1>
+      <p class="subtitle">Real-time weather data</p>
     </header>
 
+    <div class="search-container">
+      <input type="text" id="city" placeholder="Search city... (e.g. London, Tokyo)" value="New York">
+      <button onclick="getWeather()">Search</button>
+    </div>
+
     <div id="weather" class="weather-card"></div>
-    <div id="forecast" class="forecast"></div>
+    <div id="forecast" class="forecast-container"></div>
   </div>
 
   <script src="script.js"></script>
